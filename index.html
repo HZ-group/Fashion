@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HZ Fashion - Store Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Light cream background */
+            color: #3e2723; /* Dark chocolate brown text color */
+            font-family: 'Playfair Display', serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: transparent;
+            color: #3e2723; /* Dark chocolate brown text color */
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+
+        footer {
+            background-color: transparent;
+            color: #3e2723; /* Dark chocolate brown text color */
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .logo {
+            margin: 20px auto 40px; /* Center the logo and adjust margins */
+            display: block;
+            max-height: 120px; /* Adjusted logo size */
+            transition: opacity 0.5s, transform 0.5s; /* Smooth transition for fade and scale */
+            opacity: 1; /* Full visibility initially */
+        }
+
+        .content {
+            flex-grow: 1;
+            padding-top: 10px; /* Adjusted for spacing */
+            position: relative;
+            z-index: 1; /* Above the logo when scrolling */
+            transition: opacity 0.5s; /* Smooth transition for content */
+        }
+
+        /* General fade-in effect for content sections */
+        .info-section, p, h1, h2, footer {
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0; /* Start transparent, animate to opaque */
+            margin-bottom: 40px; /* Increased spacing between sections */
+        }
+
+        /* Keyframes for the fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Adjustments for the opening hours section */
+        .opening-hours {
+            text-align: center; /* Center the content */
+            margin-bottom: 60px; /* More space after the section */
+        }
+
+        /* Layout for contact info */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px; /* More space after the section */
+        }
+
+        .contact-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 20px; /* Horizontal spacing between columns */
+        }
+
+        .contact-item {
+            margin-bottom: 10px; /* Vertical spacing within columns */
+        }
+
+        /* Layout for facilities */
+        .facilities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center-align the facilities */
+        }
+
+        .facility {
+            flex: 1 0 30%; /* Give facilities some breathing room */
+            margin: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .logo {
+                margin-top: 20px;
+                max-height: 100px; /* Adjust logo size on mobile */
+            }
+
+            .info-section {
+                padding: 15px;
+                margin-bottom: 20px; /* Adjusted margins for mobile */
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center; /* Center-align columns on mobile */
+            }
+
+            .facility {
+                flex: 1 0 48%; /* Adjust for mobile layout */
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>HZ Fashion</h1>
+        <img src="https://raw.githubusercontent.com/Bahram-12/hz_fashion/main/logo.PNG" alt="HZ Fashion Logo" class="logo">
+    </header>
+
+    <div class="content">
+        <p>Welcome to HZ Fashion, the ultimate destination for exclusive and elegant hijab party dresses, stylish casual wear, and a diverse collection of accessories. At HZ Fashion, we are dedicated to providing our customers with the highest quality boutique women's fashion, offering both retail and wholesale options to meet various needs.</p>
+        <p>Our product line includes:</p>
+        <p>1. <strong>Hijab Party Dresses:</strong> Discover our handpicked selection of hijab party dresses, designed to make you stand out at any occasion. From sequined gowns to embroidered maxi dresses, our collection is curated to offer you the best in modest fashion with a touch of elegance.</p>
+        <p>2. <strong>Casual Wear:</strong> Browse through our extensive range of casual wear, including tunics, blouses, skirts, and trousers. Whether you're looking for something comfortable for daily wear or an outfit that's both stylish and modest, you'll find it here.</p>
+        <p>3. <strong>Accessories:</strong> Accessorize your look with our wide array of fashion accessories. From hijabs and scarves to jewelry and handbags, our accessories are perfect to complete your outfit and add a personal touch to your style.</p>
+        <p>4. <strong>Household Items:</strong> In addition to women's fashion, we offer a variety of household items that blend functionality with style. From decorative cushions and throws to elegant tableware and kitchen accessories, find everything you need to beautify your home.</p>
+        <p>At HZ Fashion, we specialize in providing a seamless shopping experience with a focus on quality and customer satisfaction. Whether you are shopping for yourself, your home, or looking to stock your business, we have everything you need under one roof. Visit us and discover why HZ Fashion is a favored destination for those who appreciate style, quality, and a diverse range of products.</p>
+
+        <div class="info-section opening-hours">
+            <h2>Opening Hours</h2>
+            <p>Monday: 9:00 am - 7:00 pm</p>
+            <p>Tuesday: 9:00 am - 7:00 pm</p>
+            <p>Wednesday: 9:00 am - 7:00 pm</p>
+            <p>Thursday: 9:00 am - 7:00 pm</p>
+            <p>Friday: 9:00 am - 7:00 pm</p>
+            <p>Saturday: 9:00 am - 7:00 pm</p>
+            <p>Sunday: 9:00 am - 7:00 pm</p>
+        </div>
+
+        <div class="info-section contact-info">
+            <div class="contact-column">
+                <div class="contact-item">Address: <a href="https://maps.google.com/?q=3192+Eglinton+Avenue+East,+Scarborough,+ON,+Canada+M1J+2H5" target="_blank">3192 Eglinton Avenue East, Scarborough, ON, Canada M1J 2H5</a></div>
+                <div class="contact-item">Instagram: <a href="https://instagram.com/_HZ_FASHION" target="_blank">@_HZ_FASHION</a>, <a href="https://instagram.com/HASSANZADA_TEXTILES" target="_blank">@HASSANZADA_TEXTILES</a></div>
+            </div>
+            <div class="contact-column">
+                <div class="contact-item">Phone: <a href="tel:+16477858536">647-785-8536</a></div>
+                <div class="contact-item">Wholesale Inquiries: <a href="tel:+19057069050">905-706-9050</a></div>
+                <div class="contact-item">Email: <a href="mailto:HASSANZADA_TEXTILES@yahoo.com">HASSANZADA_TEXTILES@yahoo.com</a></div>
+            </div>
+        </div>
+
+        <div class="info-section facilities">
+            <h2>Facilities</h2>
+            <div class="facilities">
+                <div class="facility"><i class="fas fa-wifi"></i> Free WiFi</div>
+                <div class="facility"><i class="fas fa-parking"></i> Parking Available</div>
+                <div class="facility"><i class="fas fa-wheelchair"></i> Wheelchair Accessible</div>
+            </div>
+            <div class="facilities">
+                <div class="facility"><i class="fas fa-bus"></i> Public Transport</div>
+                <div class="facility"><i class="fas fa-child"></i> Family Friendly</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 HZ Fashion. All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
